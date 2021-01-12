@@ -22,6 +22,7 @@ public class MainKeypadActionListener extends KeypadActionListener{
     private final Map<List<FingerPosition>, KeyboardAction> keyboardActionMap;
     private final List<FingerPosition> movementSequence;
     private FingerPosition currentFingerPosition;
+    private final MainInputMethodService inputMethodService;
     private boolean isLongPressCallbackSet;
     private MovementSequenceType currentMovementSequenceType = MovementSequenceType.NO_MOVEMENT;
 
@@ -38,13 +39,17 @@ public class MainKeypadActionListener extends KeypadActionListener{
     public MainKeypadActionListener(MainInputMethodService inputMethodService, View view) {
         super(inputMethodService, view);
         this.mainKeyboardView = view;
-
+        this.inputMethodService = inputMethodService;
         keyboardActionMap = mainInputMethodService.buildKeyboardActionMap();
 
         movementSequence = new ArrayList<>();
         currentFingerPosition = FingerPosition.NO_TOUCH;
     }
-
+    
+    public void paste() {
+        this.inputMethodService.paste();
+    }
+    
     public void movementStarted(FingerPosition fingerPosition) {
         currentFingerPosition = fingerPosition;
         movementSequence.clear();

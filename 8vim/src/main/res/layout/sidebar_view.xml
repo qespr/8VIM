@@ -70,15 +70,15 @@
         android:id="@+id/ctrlButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintVertical_weight="1"
         android:background="@drawable/btn_background"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_ctrl"
-        android:tint="@color/primaryIcon"
         android:contentDescription="@string/ctrl_button_content_description"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_content_paste"
+        android:tint="@color/primaryIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/goToSettingsButton"/>
+        app:layout_constraintTop_toBottomOf="@id/goToSettingsButton"
+        app:layout_constraintVertical_weight="1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

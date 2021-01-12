@@ -78,14 +78,14 @@ public class MainKeyboardView extends ConstraintLayout {
         setupSwitchToSelectionKeyboardButton();
         setupTabKey();
         setupGoToSettingsButton();
-        setupCtrlKey();
+        setupPasteKey();
 
     }
 
-    private void setupCtrlKey() {
-        ImageButton ctrlKeyButton = findViewById(R.id.ctrlButton);
+    private void setupPasteKey() {
+        ImageButton pasteKeyButton = findViewById(R.id.ctrlButton);
 
-        ctrlKeyButton.setOnClickListener(view -> actionListener.setModifierFlags(KeyEvent.META_CTRL_MASK));
+        pasteKeyButton.setOnClickListener(view -> actionListener.paste());
     }
 
     private void setupGoToSettingsButton() {
