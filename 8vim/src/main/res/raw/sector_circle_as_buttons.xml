@@ -6,12 +6,6 @@
         <inputKey>SHIFT_TOGGLE</inputKey>
     </keyboardAction>
 
-    <keyboardAction>
-        <keyboardActionType>INPUT_KEY</keyboardActionType>
-        <movementSequence>LEFT;NO_TOUCH;</movementSequence>
-        <inputKey>SWITCH_TO_NUMBER_KEYPAD</inputKey>
-    </keyboardAction>
-
     <!--Space-->
     <keyboardAction>
         <keyboardActionType>INPUT_KEY</keyboardActionType>
